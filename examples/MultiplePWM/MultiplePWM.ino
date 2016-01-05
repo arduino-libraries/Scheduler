@@ -24,7 +24,7 @@ byte counter2;
 
 void setup() {
 
-  // Setup the two led pins as OUTPUT
+  // Setup the led pins as OUTPUT
   pinMode(LED1, OUTPUT);
   pinMode(LED2, OUTPUT);
   pinMode(LED3, OUTPUT);
