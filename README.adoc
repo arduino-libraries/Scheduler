@@ -1,6 +1,6 @@
 = Scheduler Library for Arduino =
 
-The Scheduler library enables the Arduino Due to run multiple functions at the same time. This allows tasks to happen without interrupting each other. 
+The Scheduler library enables the Arduino to run multiple functions at the same time. This allows tasks to happen without interrupting each other. 
 
 For more information about this library please visit us at
 http://www.arduino.cc/en/Reference/Scheduler
