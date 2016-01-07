@@ -12,6 +12,7 @@ Scheduler	KEYWORD1	Scheduler
 # Methods and Functions (KEYWORD2)
 #######################################
 
+start KEYWORD2
 startLoop	KEYWORD2
 
 #######################################
