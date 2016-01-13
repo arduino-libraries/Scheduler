@@ -3,6 +3,16 @@
 #######################################
 
 #######################################
+# DataTypes (LITERAL2)
+#######################################
+
+tid_t	LITERAL2		RESERVED_WORD_2
+sem_t	LITERAL2		RESERVED_WORD_2
+mutex_t	LITERAL2		RESERVED_WORD_2
+TaskStack	LITERAL2		RESERVED_WORD_2
+TaskContext	LITERAL2		RESERVED_WORD_2
+
+#######################################
 # Datatypes (KEYWORD1)
 #######################################
 
@@ -12,10 +22,46 @@ Scheduler	KEYWORD1	Scheduler
 # Methods and Functions (KEYWORD2)
 #######################################
 
-start KEYWORD2
 startLoop	KEYWORD2
+start	KEYWORD2
+stackPtr	KEYWORD2
+stackEnd	KEYWORD2
+contextPtr	KEYWORD2
+heapStart	KEYWORD2
+heapEnd	KEYWORD2
+taskStop	KEYWORD2
+taskResume	KEYWORD2
+setPriority	KEYWORD2
+taskPriority	KEYWORD2
+switchTask	KEYWORD2
+sem_set	KEYWORD2
+sem_get	KEYWORD2
+sem_op	KEYWORD2
+mutex_init	KEYWORD2
+mutex_lock	KEYWORD2
+mutex_unlock	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
+#######################################
+# Constant (LITERAL2)
+#######################################
+
+DEFAULT_STACK_SIZE	LITERAL2		RESERVED_WORD_2
+TASK_CONTEXT_SIZE	LITERAL2		RESERVED_WORD_2
+
+#######################################
+# Function (KEYWORD3)
+#######################################
+
+loop1	KEYWORD3		RESERVED_WORD
+loop2	KEYWORD3		RESERVED_WORD
+loop3	KEYWORD3		RESERVED_WORD
+loop4	KEYWORD3		RESERVED_WORD
+loop5	KEYWORD3		RESERVED_WORD
+loop6	KEYWORD3		RESERVED_WORD
+loop7	KEYWORD3		RESERVED_WORD
+loop8	KEYWORD3		RESERVED_WORD
+loop9	KEYWORD3		RESERVED_WORD
