@@ -1,0 +1,13 @@
+
+// Sketch no.3
+
+void setup3 () {
+    pinMode(LED3, OUTPUT);
+}
+
+void loop3 () {
+  digitalWrite(LED3, HIGH);
+  delay(250);
+  digitalWrite(LED3, LOW);
+  delay(250);
+}
