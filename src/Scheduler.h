@@ -20,18 +20,18 @@
 #include <Arduino.h>
 
 extern "C" {
-	typedef void (*SchedulerTask)(void);
-	typedef void (*SchedulerParametricTask)(void *);
+  typedef void (*SchedulerTask)(void);
+  typedef void (*SchedulerParametricTask)(void *);
 }
 
 class SchedulerClass {
 public:
-	SchedulerClass();
-	static void startLoop(SchedulerTask task, uint32_t stackSize = 1024);
-	static void start(SchedulerTask task, uint32_t stackSize = 1024);
-	static void start(SchedulerParametricTask task, void *data, uint32_t stackSize = 1024);
+  SchedulerClass();
+  static void startLoop(SchedulerTask task, uint32_t stackSize = 1024);
+  static void start(SchedulerTask task, uint32_t stackSize = 1024);
+  static void start(SchedulerParametricTask task, void *data, uint32_t stackSize = 1024);
 
-	static void yield() { ::yield(); };
+  static void yield() { ::yield(); };
 };
 
 extern SchedulerClass Scheduler;
