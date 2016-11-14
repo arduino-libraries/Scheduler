@@ -22,14 +22,42 @@
 extern "C" {
   typedef void (*SchedulerTask)(void);
   typedef void (*SchedulerParametricTask)(void *);
+
+#if ARDUINO < 150
+  void yield(void); // define a global yield function
+#warning "library calls to Arduino delay doesnt contain yield() and might block scheduler during this delay"
+#endif
+
 }
+
+#ifndef yieldPROTECT
+#define yieldPROTECT() static uint8_t __yieldProtect = 0; \
+uint8_t* __temp __attribute__((__cleanup__(__yieldUnprotect))) = & __yieldProtect; \
+while (__yieldProtect) yield(); __yieldProtect = 1;
+void inline __yieldUnprotect(uint8_t* *__s) { uint8_t* staticFlag = *__s; *staticFlag = 0; };
+#endif
+
+#ifndef yieldATOMIC
+#define yieldATOMIC for ( uint8_t __temp __attribute__((__cleanup__(__decYieldAtomic))) = __incYieldAtomic(); __temp  ; __temp = 0 )
+static volatile uint8_t __yieldAtomic = 0;
+void inline    __decYieldAtomic(const  uint8_t *__s) { --__yieldAtomic; }
+uint8_t inline __incYieldAtomic(void)                { ++__yieldAtomic; return 1; }
+#endif
+
+#ifdef __AVR__
+#define SchedulerDefaultStack 256  // proposed value, might be too low fo complex application or too high if not needed ... to be experimented by user
+#else
+#define SchedulerDefaultStack 1024 // original value, probably too much for most usage, but lot of memory on SAM
+#endif
+
 
 class SchedulerClass {
 public:
   SchedulerClass();
-  static void startLoop(SchedulerTask task, uint32_t stackSize = 1024);
-  static void start(SchedulerTask task, uint32_t stackSize = 1024);
-  static void start(SchedulerParametricTask task, void *data, uint32_t stackSize = 1024);
+  static void startLoop(SchedulerTask task, uint32_t stackSize = SchedulerDefaultStack);
+  static void start(SchedulerTask task, uint32_t stackSize = SchedulerDefaultStack);
+  static void start(SchedulerParametricTask task, void *data, uint32_t stackSize = SchedulerDefaultStack);
+  static void delay(uint32_t ms);
 
   static void yield() { ::yield(); };
 };
@@ -37,4 +65,3 @@ public:
 extern SchedulerClass Scheduler;
 
 #endif
-
