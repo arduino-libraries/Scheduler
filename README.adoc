@@ -4,6 +4,7 @@
 = {repository-name} Library for Arduino =
 
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-arduino.yml/badge.svg["Check Arduino status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-arduino.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml/badge.svg["Compile Examples status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml"]
 image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml/badge.svg["Spell Check status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml"]
 
 The Scheduler library enables the Arduino link:https://store.arduino.cc/arduino-due[Due], link:https://store.arduino.cc/arduino-zero[Zero], and link:https://store.arduino.cc/arduino-mkr1000-wifi[MKR1000] to run multiple functions at the same time. This allows tasks to happen without interrupting each other. 
