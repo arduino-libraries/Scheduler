@@ -1,9 +1,16 @@
-= Scheduler Library for Arduino =
+:repository-owner: arduino-libraries
+:repository-name: Scheduler
 
-The Scheduler library enables the Arduino link:https://www.arduino.cc/en/Main/ArduinoBoardDue[Due], link:https://www.arduino.cc/en/Main/ArduinoBoardZero[Zero], and link:https://www.arduino.cc/en/Main/ArduinoMKR1000[MKR1000] to run multiple functions at the same time. This allows tasks to happen without interrupting each other. 
+= {repository-name} Library for Arduino =
+
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-arduino.yml/badge.svg["Check Arduino status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/check-arduino.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml/badge.svg["Compile Examples status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/compile-examples.yml"]
+image:https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml/badge.svg["Spell Check status", link="https://github.com/{repository-owner}/{repository-name}/actions/workflows/spell-check.yml"]
+
+The Scheduler library enables the Arduino link:https://store.arduino.cc/arduino-due[Due], link:https://store.arduino.cc/arduino-zero[Zero], and link:https://store.arduino.cc/arduino-mkr1000-wifi[MKR1000] to run multiple functions at the same time. This allows tasks to happen without interrupting each other. 
 
 For more information about this library please visit us at
-http://www.arduino.cc/en/Reference/Scheduler
+http://www.arduino.cc/en/Reference/{repository-name}
 
 == License ==
 

@@ -66,11 +66,11 @@ void loop3() {
     char c = Serial.read();
     if (c == '0') {
       digitalWrite(led3, LOW);
-      Serial.println("Led turned off!");
+      Serial.println("LED turned off!");
     }
     if (c == '1') {
       digitalWrite(led3, HIGH);
-      Serial.println("Led turned on!");
+      Serial.println("LED turned on!");
     }
   }
 
