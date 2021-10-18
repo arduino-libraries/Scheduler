@@ -1,4 +1,4 @@
-# Mouse library
+# Scheduler library
 
 ## Methods
 

@@ -1,4 +1,4 @@
-# Scheduler 
+# Scheduler library
 
 The Scheduler library enables an Arduino based on SAM and SAMD architectures (i.e Zero, MKRZero, MKR1000, Due boards) to run multiple functions at the same time. This allows tasks to happen without interrupting each other. This is a cooperative scheduler in that the CPU switches from one task to another. The library includes methods for passing control between tasks.
 
